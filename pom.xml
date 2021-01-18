@@ -14,9 +14,6 @@
 	<name>fitnessmanager</name>
 	<description>Fitness App for tracking diet and training routines.</description>
 
-	<properties>
-		<java.version>11</java.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
