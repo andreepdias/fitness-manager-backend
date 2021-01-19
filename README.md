@@ -17,6 +17,13 @@ A aplicação foi desenvolvida utilizando Spring Boot 2 e banco de dados relacio
 
 ## Modelagem das Entidades
 
+
+### Diagrama de Relacionamento de Entidades
+
+![](https://i.imgur.com/BBmorAQ.png)
+
+---
+
 #### User
 Usuário do sistema.
 
@@ -69,8 +76,3 @@ Um possível exercício cadastrado para o usuário.
 #### Tag
 Uma possível tag que um ou mais exercícios podem assumirem. Tem a função de diferenciar os diferentes tipos de exercícios (por agrupamento muscular, objetivo, etc.)
 
----
-
-### Diagrama de Relacionamento de Entidades
-
-![](https://i.imgur.com/BBmorAQ.png)
