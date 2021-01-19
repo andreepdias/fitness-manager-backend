@@ -3,6 +3,7 @@ package github.andreepdias.fitnessmanager.service;
 import github.andreepdias.fitnessmanager.exceptions.DataInconsistencyException;
 import github.andreepdias.fitnessmanager.exceptions.ObjectNotFoundException;
 import github.andreepdias.fitnessmanager.model.entity.Training.Exercise;
+import github.andreepdias.fitnessmanager.model.entity.User;
 import github.andreepdias.fitnessmanager.repository.ExerciseRepository;
 import github.andreepdias.fitnessmanager.repository.SessionExerciseRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,7 +41,9 @@ public class ExerciseService {
     }
 
     public Exercise create(Exercise exercise) {
+        User user = userService.findAuthenticatedUser();
         exercise.setId(null);
+        exercise.setUser(user);
         return repository.save(exercise);
     }
 

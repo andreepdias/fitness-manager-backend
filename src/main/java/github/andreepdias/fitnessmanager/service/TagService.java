@@ -3,6 +3,7 @@ package github.andreepdias.fitnessmanager.service;
 import github.andreepdias.fitnessmanager.exceptions.DataInconsistencyException;
 import github.andreepdias.fitnessmanager.exceptions.ObjectNotFoundException;
 import github.andreepdias.fitnessmanager.model.entity.Training.Tag;
+import github.andreepdias.fitnessmanager.model.entity.User;
 import github.andreepdias.fitnessmanager.repository.ExerciseRepository;
 import github.andreepdias.fitnessmanager.repository.TagRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,7 +41,9 @@ public class TagService {
     }
 
     public Tag create(Tag tag) {
+        User user = userService.findAuthenticatedUser();
         tag.setId(null);
+        tag.setUser(user);
         return repository.save(tag);
     }
 
